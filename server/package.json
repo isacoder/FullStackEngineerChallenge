@@ -1,0 +1,16 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "knex": "knex --knexfile knexfile.js"
+  },
+  "author": "isabel.anguianop@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^0.21.0",
+    "mysql": "^2.18.1"
+  }
+}
