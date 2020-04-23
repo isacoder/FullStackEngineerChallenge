@@ -37,3 +37,13 @@ Design a web application that allows employees to submit feedback toward each ot
 * Technology and design choices
 * Identify areas of your strengths
 * This is not a pass or fail test, this will serve as a common ground that we can deep dive together into specific issues
+
+## How to run the project
+
+```
+docker-compose build
+docker-compose up -d
+cd server/
+npm install && npm run knex migrate:latest && npm run knex seed:run 01_initial_objects
+visit localhost:5000
+```
