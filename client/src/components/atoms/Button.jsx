@@ -8,8 +8,8 @@ export const ButtonCss = css`
   padding: 10px 16px;
   margin: 0;
   text-decoration: none;
-  background: ${Colors.blue};
-  color: ${Colors.white};
+  background: ${Colors.buttonBg};
+  color: ${Colors.buttonText};
   font-size: 1rem;
   line-height: 1;
   cursor: pointer;
@@ -18,6 +18,9 @@ export const ButtonCss = css`
   -webkit-appearance: none;
   -moz-appearance: none;
   outline: none;
+  &:hover{
+    background-color: ${Colors.buttonHover};
+  }
 `;
 
 const CustomButton = styled.button`

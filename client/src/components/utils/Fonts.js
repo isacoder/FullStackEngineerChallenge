@@ -19,8 +19,23 @@ export const textSize = {
   caption: fontSize.small,
 }
 
-
 export const Title = styled.h1`
   font-size: ${textSize.h2Size};
   color: ${Colors.green_dark};
+`;
+
+export const SectionTitle = styled.h3`
+  font-size: ${textSize.h3Size};
+  color: ${Colors.gray1};
+  text-align: left;
+`;
+
+export const Name = styled.div`
+  font-size: ${fontSize.great};
+  color: ${Colors.gray1};
+`;
+
+export const JobTitle = styled.div`
+  font-size: ${fontSize.small};
+  color: ${Colors.gray2};
 `;

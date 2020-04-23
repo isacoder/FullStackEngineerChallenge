@@ -12,8 +12,11 @@ const Tab = styled.div`
   text-align: center;
   padding: 20px 10px;
   background-color: ${TAB_COLORS.base};
-  cursor: pointer;
   width: 100%;
+  &:hover{
+    cursor: pointer;
+  }
+
   ${props => props.active ? `
     background-color: ${TAB_COLORS.active};
   `: null};
