@@ -5,12 +5,36 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "knex": "knex --knexfile knexfile.js"
+    "knex": "knex --knexfile knexfile.js",
+    "dev": "NODE_ENV=development nodemon --exec babel-node -- ./src/server.js"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/env",
+        {
+          "targets": {
+            "node": 12
+          }
+        }
+      ]
+    ]
   },
   "author": "isabel.anguianop@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
+    "body-parser": "^1.19.0",
+    "bookshelf": "^1.1.1",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.0.0",
+    "express": "^4.17.1",
     "knex": "^0.21.0",
-    "mysql": "^2.18.1"
+    "lodash": "^4.17.15",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.3",
+    "validator": "^13.0.0"
   }
 }
