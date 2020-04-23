@@ -1,4 +1,4 @@
-import bookshelf from '../../bookshelf';
+import bookshelf from '../bookshelf';
 
 class Employee extends bookshelf.Model {
   get tableName() {

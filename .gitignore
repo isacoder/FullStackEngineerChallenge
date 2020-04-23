@@ -1,2 +1,5 @@
 node_modules/
 **/package-lock.json
+server/dist
+client/build
+.DS_Store

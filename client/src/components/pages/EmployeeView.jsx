@@ -102,7 +102,7 @@ const reactionsDefault2 = [
   { name: 'no_clue', value: 0 }];
 
 const EmployeeView = ({ userId, props }) => {
-  const [activeTab, setActiveTab] = useState('yours');
+  const [activeTab, setActiveTab] = useState('mine');
   const [userReviews, setUserReviews] = useState([]);
   const [teamsReviews, setTeamReviews] = useState([]);
   const [userReactions, setUserReactions] = useState(reactionsDefault);

@@ -2,7 +2,7 @@ version: '3.0'
 
 services:
   db:
-    image: mysql:8
+    build: ./db
     container_name: appraisal_db
     environment:
       - MYSQL_ROOT_PASSWORD=root
@@ -11,3 +11,24 @@ services:
       - MYSQL_PASSWORD=abc123
     ports:
       - 3306:3306
+
+  api:
+    build: ./server
+    container_name: appraisal_api
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_NAME=appraisal
+      - DB_USER=app_user
+      - DB_PASSWORD=abc123
+    ports:
+      - 8000:8000
+
+  client:
+    build:
+      context: ./client
+      args:
+      - REACT_APP_API_HOST=http://localhost:8000
+    container_name: appraisal_client
+    ports:
+      - 5000:5000

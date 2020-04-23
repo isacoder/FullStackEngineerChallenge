@@ -1,4 +1,4 @@
-import bookshelf from '../../bookshelf';
+import bookshelf from '../bookshelf';
 
 class PerformanceReview extends bookshelf.Model {
   get tableName() {

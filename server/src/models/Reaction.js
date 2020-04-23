@@ -1,4 +1,4 @@
-import bookshelf from '../../bookshelf';
+import bookshelf from '../bookshelf';
 
 class Reaction extends bookshelf.Model {
   get tableName() {

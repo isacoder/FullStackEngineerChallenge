@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "knex": "knex --knexfile knexfile.js",
-    "dev": "NODE_ENV=development nodemon --exec babel-node -- ./src/server.js"
+    "dev": "NODE_ENV=development nodemon --exec babel-node -- ./src/server.js",
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && babel ./src --out-dir ./dist --ignore node_modules --copy-files"
   },
   "babel": {
     "presets": [
@@ -23,6 +25,7 @@
   "author": "isabel.anguianop@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.9.5",
